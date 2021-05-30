@@ -6,7 +6,7 @@ Owner::Owner()
 
 Owner::~Owner()
 {
-	if (FullName[0] == '\0')
+	if (FullName[0] != '\0')
 	{
 		PutInfoIntoFile();
 	}

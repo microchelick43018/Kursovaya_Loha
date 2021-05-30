@@ -29,7 +29,7 @@ User::~User()
 void User::SignUp(string startPath)
 {
 	char password[100];
-	cout << "Введите своё ФИО: ";
+	cout << "Введите свой логин: ";
 	cin.clear();
 	cin.ignore(100, '\n');
 	cin.getline(FullName, 100);
@@ -60,14 +60,14 @@ bool User::LogIn(string startPath)
 	bool isCorrected = false;
 	while (isCorrected == false)
 	{
-		cout << "Введите своё ФИО: ";
+		cout << "Введите свой логин: ";
 		cin.clear();
 		cin.ignore(100, '\n');
 		cin.getline(FullName, 100);
 		fs.open(ConnectStringAndChar(startPath, FullName), ios::in | ios::binary);
 		if (fs.is_open() == false)
 		{
-			cout << "Неверное ФИО, желаете повторите попытку? 1 - да, 2 - нет." << endl;
+			cout << "Неверный логин, желаете повторите попытку? 1 - да, 2 - нет." << endl;
 			int choice = MakeAChoice(2);
 			if (choice == 2)
 			{

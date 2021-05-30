@@ -61,16 +61,6 @@ void Request::ShowInfo(bool forClient)
 
 void Request::ShowInfoForOwner(bool isBought)
 {
-	/*	cout.setf(ios::left);
-	cout << setw(5) << "№";
-	cout << setw(16) << "Имя товара";
-	cout << setw(16) << "Тип товара";
-	cout << setw(17) << "Имя клиента";
-	cout << setw(17) << "Цена выкупа";
-	cout << setw(22) << "Цена в заведении";
-	cout << setw(20) << "Возраст товара";
-	cout << setw(20) << "Статус запроса" << endl;
-	cout << setw(29) << "Статус товара на складе" << endl;*/
 	string out = _product.GetName();
 	FillSpaces(out, 16 - out.size());
 	out += _product.GetType();

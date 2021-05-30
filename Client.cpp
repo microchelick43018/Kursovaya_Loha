@@ -172,10 +172,10 @@ Request& Client::CreateRequest(Store& store)
 	getline(cin, name);
 	cout << "¬ведите тип товара: ";
 	getline(cin, type);
-	cout << "¬ведите цену выкупа: ";
+	cout << "¬ведите цену выкупа в ($): ";
 	buyoutPrice = MakeAChoice(10, 1000);
-	cout << "¬ведите возраст товара: ";
-	age = MakeAChoice(1, 20);
+	cout << "¬ведите возраст товара (количество мес€цев, мин 1, макс - 60): ";
+	age = MakeAChoice(1, 60);
 	product.Set(name, type, ConvertMasCharToString(FullName), buyoutPrice, 0, age);
 	Request request(product, 0);
 	store.AddRequest(request);
